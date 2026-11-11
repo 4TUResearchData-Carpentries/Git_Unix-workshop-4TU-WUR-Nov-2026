@@ -1,6 +1,6 @@
 # Introduction to version control with Git 
 
-Welcome to the **Git & Unix workshop**! for Wageningen University of Technology, on 22-23 June 2026.  This repository contains instructions for the two-day hands-on workshop focused on **how to interact with the Unix terminal**, **version control with Git**, **collaborative best practices**, and **getting to know [4TU.ResearchData](data.4tu.nl)**.
+Welcome to the **Git & Unix workshop**! for Wageningen University of Technology, on 30 November - 1st December 2026.  This repository contains instructions for the two-day hands-on workshop focused on **how to interact with the Unix terminal**, **version control with Git**, **collaborative best practices**, and **getting to know [4TU.ResearchData](data.4tu.nl)**.
 
 
 **Links:**
