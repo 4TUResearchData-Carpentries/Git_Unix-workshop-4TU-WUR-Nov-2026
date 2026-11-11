@@ -1,0 +1,118 @@
+---
+title: Welcome to the Unix & Git workshop
+
+---
+
+
+
+
+## Program of today (Day 1)
+
+<!-- Source slide 3 -->
+
+| Time | Activity |
+|:--|:--|
+| 09:30–12:00 | Introduction to the Unix shell |
+| 12:00–13:00 | **Lunch** |
+| 13:00–16:30 | Version control with Git |
+| 14:15–14:30 | **Break** |
+| 16:30 | End of workshop — Day 1 |
+
+
+## The team of the workshop : Instructors
+
+
+
+::: {.columns}
+::: {.column width="45%"}
+![Leila Iñigo](images/workshop-intro-day-1/slide-04-03-3f7063481c.jpg){width="55%"}
+
+<small>Skills trainer at 4TU.ResearchData</small>
+:::
+
+::: {.column width="45%"}
+![Tiernan O'Sullivan](images/workshop-intro-day-1/tiernan.jpg){width="55%"}
+
+
+<small>Skills trainer at Tilburg University</small>
+:::
+
+:::
+
+
+## The team of the workshop : Helpers
+
+::: {.columns}
+::: {.column width="30%"}
+![Nami Sunami](images/workshop-intro-day-1/nami.jpg){width="55%"}
+
+
+
+<small> Research Data Steward at TU/e </small>
+:::
+
+::: {.column width="30%"}
+![Neha Moopen](images/workshop-intro-day-1/neha.jpg){width="55%"}
+
+
+<small>Research Data Manager at Utrecht University Library</small>
+:::
+
+::: {.column width="30%"}
+![Neha Moopen](images/workshop-intro-day-1/Martijn-Klabbers.webp){width="55%"}
+
+
+<small> Manager at ICT, Education Innovator at Department of Mathematics and Computer Science, TU/e</small>
+:::
+
+:::
+
+
+## The team of the workshop
+
+<!-- Source slide 5 -->
+
+### You!
+
+**Faculty**
+
+![Pie chart of workshop participant faculties](images/workshop-intro-day-1/slide-05-faculty-chart.svg){width=75%}
+
+
+
+
+## Code of Conduct
+
+<!-- Source slide 6 -->
+
+::: {.columns}
+::: {.column width="36%"}
+![](images/workshop-intro-day-1/slide-06-03-1a78f88419.png){width="90%"}
+
+<small>The Carpentries teaches foundational coding and data science skills to researchers worldwide.</small>
+:::
+
+::: {.column width="64%"}
+- Use welcoming and inclusive language
+- Be respectful of different viewpoints and experiences
+- Gracefully accept constructive criticism
+- Show courtesy and respect towards others during the workshop
+:::
+:::
+
+
+## Ice breaker
+
+<!-- Source slide 7 -->
+
+Go to **[https://edu.nl/8efu9](https://edu.nl/8efu9)**
+
+**On the goat-scale, how are you feeling today?**
+
+![Goat-scale mood check with six goats](images/workshop-intro-day-1/slide-07-03-a7626b7c67.png){width="58%"}
+
+
+
+
+
+

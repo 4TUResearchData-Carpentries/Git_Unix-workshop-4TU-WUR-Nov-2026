@@ -1,0 +1,29 @@
+project:
+  type: default
+  output-dir: _site
+  # copied as-is into the built site (the brand fonts used by fonts.css)
+  resources:
+    - fonts/
+  # Every deck that should be built goes in this list (order does not matter).
+  # When you add a new .qmd deck, add it here AND link it in index.qmd.
+  render:
+    - index.qmd
+    - 01-intro.qmd
+    - 02-lesson-example.qmd
+
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    css: fonts.css          # @font-face rules for Aspekta and Space Grotesk
+    slide-number: true
+    chalkboard: false
+    hash: true
+    transition: fade
+    highlight-style: a11y   # accessible code colours, readable on the Off White code background
+    footer: "TRAINING NAME / ORGANISATION"
+    # logo: img/logo.png   # uncomment and add your logo; positioned by .slide-logo in styles.scss
+
+  # the landing page (index.qmd) uses the same colours and fonts as the slides
+  html:
+    theme: [default, styles.scss]
+    css: fonts.css

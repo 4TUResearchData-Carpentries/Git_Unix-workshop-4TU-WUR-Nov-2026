@@ -376,17 +376,47 @@ Ensure changes are committed:
 
 ```bash
 git add calculate_mean.py
-git commit -m "add usage"
+
+git restore calculate_mean.py
+
+cat calculate_mean.py # inspect the file
+
+git status 
+
 ```
+if nothing is modified in the file , proceed to add and commit the file
+
 
 Revert to last commit:
 
 ```bash
+git add calculate_mean.py
+git commit -m "add usage"
 git restore calculate_mean.py
 cat calculate_mean.py
+git status
 ```
 It’s important to understand that git restore <file> is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version. Don’t ever use this command unless you absolutely know that you don’t want those unsaved local changes.
 
+> showcase the lost of information (optional)
+
+
+
+```bash
+git add calculate_mean.py
+
+```
+- change the local file with some dummy text
+
+```bash
+
+git restore calculate_mean.py
+cat calculate_mean.py 
+```
+
+what has happened?  the local modifications should have been erased
+
+-----------------------
 
 Revert to specific commit:
 

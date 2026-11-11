@@ -1,0 +1,22 @@
+---
+title: "TRAINING NAME"
+subtitle: "Slides, in order of the training"
+format:
+  html:
+    toc: false
+---
+
+The training slides, in the order they are presented:
+
+1. [Intro](01-intro.html): welcome, schedule, team and code of conduct
+2. [Lesson example](02-lesson-example.html): a starter lesson deck showing the available building blocks
+
+<!--
+HOW TO ADD A NEW DECK
+1. Create a file such as 03-my-lesson.qmd (copy 02-lesson-example.qmd as a starting point).
+2. Add it to the `render:` list in _quarto.yml.
+3. Add a line for it in the list above, e.g.
+   3. [My lesson](03-my-lesson.html): short description
+-->
+
+Click a slide deck to open it. Inside a deck, press `F` for fullscreen, `S` for speaker view and `O` for the slide overview.

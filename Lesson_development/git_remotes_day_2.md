@@ -195,7 +195,7 @@ git push origin <your-branch-name>
 **demo before assignment**
 
 1. Owner writes an issue about something is not working in the code.
-2. Collaborator forks , clone , make a new branch, solve the issue and push it to the fork and create a PR.
+2. Collaborator forks , clone , make a new branch, solve the issue and push it to the fork and create a MR.
 3. Owner sees the peer and tries it locally before it can be merged.
    `git fetch origin merge-requests/123/head:mr-123` 123 is the number after the `!` of the MR, and `mr-123` is the name of the branch created for that MR
    `git switch mr-123`

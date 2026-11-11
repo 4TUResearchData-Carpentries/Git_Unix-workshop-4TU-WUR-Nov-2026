@@ -1,0 +1,53 @@
+name: Build and publish slides
+
+on:
+  push:
+    paths:
+      - "Lesson_development/Presentations/**"
+      - ".github/workflows/slides.yml"
+  # Re-publish the slides after the lesson site has been rebuilt (see notes below)
+  workflow_run:
+    workflows: ["01 Build and Deploy Site"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: slides-${{ github.ref }}
+      cancel-in-progress: false
+    defaults:
+      run:
+        working-directory: Lesson_development/Presentations
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: release
+
+      - name: Render all decks
+        run: quarto render
+
+      # Every branch: keep the rendered site so you can download and check it
+      - uses: actions/upload-artifact@v4
+        with:
+          name: slides
+          path: Lesson_development/Presentations/_site
+
+      # main only: publish into the slides/ folder of the gh-pages branch
+      - name: Publish to /slides/
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: Lesson_development/Presentations/_site
+          destination_dir: slides
+          keep_files: true

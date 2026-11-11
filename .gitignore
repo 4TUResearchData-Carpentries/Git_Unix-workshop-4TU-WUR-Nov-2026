@@ -1,4 +1,4 @@
-Lesson_development/Presentations
+Lesson_development/Presentations/pptx
 Metadata/
 Meetings/
 Eventbrite/
@@ -9,4 +9,11 @@ References/
 Certificates/
 Expenses_declaration/
 
-Lesson_development/git_20250625_tue.md
+
+
+Lesson_development/Presentations/.quarto/
+Lesson_development/Presentations/_site/
+Lesson_development/Presentations/.luarc.json
+
+/.quarto/
+**/*.quarto_ipynb
