@@ -5,8 +5,8 @@ Welcome to the **Git & Unix workshop**! for Wageningen University of Technology,
 
 **Links:**
 
-<!-- - Mentimeter Git Intro- https://edu.nl/cma84 -->
-- Collaborative notes- https://hackmd.io/zk0YPkvKRTOU4tPj2ZckzQ
+- Collaborative notes- https://edu.nl/krd3y
+
 
 ## 🚀 Workshop Overview
 

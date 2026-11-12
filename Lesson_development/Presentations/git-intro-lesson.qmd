@@ -67,7 +67,7 @@ In research and software projects, many people may work on the same files: scrip
 ::: {.column width="33%"}
 
 
-![Laura](images/git-intro-lesson/slide-05-02-c1c46fe862.jpg){width="40%"}
+![Laura](images/git-intro-lesson/Laura.png){width="40%"}
 
 :::
 
