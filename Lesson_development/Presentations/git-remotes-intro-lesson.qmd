@@ -37,22 +37,25 @@ title: Git Remotes and collaboration
 
 
 
+## GitLab
 
-## GitHub
+- **GitLab started as a self-hosted tool, not a website (2011)**  
+  GitLab began as an open-source side project by the Ukrainian developer Dmitriy Zaporozhets, who wanted a Git hosting tool his team could run on its own servers. It later grew into a company (GitLab Inc., founded in 2014) and the hosted service GitLab.com. 
 
-- GitHub is a web-based platform for hosting Git repositories, sharing code, and collaborating on projects.
+- **You can run your own GitLab: handy when data must stay in-house**  
+  The core of GitLab is open source, and anyone can install it on their own server.  Your code, and sometimes sensitive project files, stay on infrastructure your institution controls.
+
+- **Same Git, different words: core vocabulary**  
+  If you know GitHub, you already know most of GitLab, but some names differ:
+
+  | GitHub | GitLab |
+  |---|---|
+  | Pull request | **Merge request** |
+  | Repository | **Project** (a repository plus its issues, CI, wiki, etc.) |
+  | Organization | **Group** (can contain *subgroups*) |
 
 
-
-- Launched in 2008, three years after Git was created, it was acquired by Microsoft in 2018.
-
-
-
-- It extends Git with collaboration features such as Issues, Pull Requests, code reviews, and discussions.
-
-
-
-- It also offers GitHub Actions to automate workflows such as testing and deploying software. 
+  A *fork*, *branch*, *issue*, and *wiki* mean the same on both platforms. 
 
 
 ## Local and remote repositories

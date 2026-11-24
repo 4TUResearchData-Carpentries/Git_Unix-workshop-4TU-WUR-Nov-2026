@@ -13,10 +13,10 @@
 
 #### a. Create a Gitlab WUR instance Repository
 
-> Ask participants to log into Gitlab WUR instance and create an **empty public repository** named `patients-analysis`.
+> Ask participants to log into Gitlab WUR instance and create an **empty public repository** named `field-study`.
 
-* Description suggestion: *Analysis of different clinical treatments*
-* Instructor should ensure that the Issues are enabled when you create the repository
+* Description suggestion: **Analysis of different water temperature measurements**
+* Instructor should ensure that the Issues (Work items) are enabled when you create the repository
 
 #### b. Connect Local Repo to Remote
 
@@ -79,13 +79,13 @@ ssh -T git@git.wur.nl
 Return to your project folder:
 
 ```bash
-cd ~/Desktop/patients
+cd ~/Desktop/field-study
 ```
 
 Link to the remote repository:
 
 ```bash
-git remote add origin git@git.wur.nl.com:<your-username>/patients-analysis.git
+git remote add origin git@git.wur.nl.com:<your-username>/field-study.git
 git remote -v
 ```
 
@@ -147,11 +147,11 @@ Create a copy of the template and edit it:
 
 ```bash
 cd workshop-checkin
-cp template.md <first-two-letters-name-last-two-digits-phone>.md
-nano le71.md
+cp template.md <first-two-letters-name-last-two-postal-code>.md
+nano lgxx.md
 ```
 
-> Example name: `le71.md`. Add your name, research field and your ideal job an ideal world.
+> Example name: `lg26.md`. Add your name, research field and your ideal job an ideal world.
 
 ### c. Collaborative Git Workflow
 
@@ -159,7 +159,7 @@ A typical workflow:
 
 ```bash
 git pull origin main
-git add .
+git add lg26.md
 git commit -m "check <your-name> in"
 git push origin main
 ```
@@ -181,58 +181,118 @@ Edit your check-in file, stage, commit, and push:
 ```bash
 git add check-in/<your-id>.md
 git commit -m "add check-in info"
-git push origin <your-branch-name>
+git push -u origin <your-branch-name>
 ```
 
-> Instructor can then demonstrate how to open a Pull Request (PR) via the Gitlab WUR instance interface.
+> Instructor can then demonstrate how to open a Merge Request (MR) via the Gitlab WUR instance interface.
 
 ---
 
-## 🧩 Final Exercise: Working with Issues and PRs
-
+## 🧩 Final Exercise: Working with Issues and MRs
 > Instructor Note: Display this on a shared screen or slide.
 
 **demo before assignment**
 
-1. Owner writes an issue about something is not working in the code.
-2. Collaborator forks , clone , make a new branch, solve the issue and push it to the fork and create a MR.
-3. Owner sees the peer and tries it locally before it can be merged.
-   `git fetch origin merge-requests/123/head:mr-123` 123 is the number after the `!` of the MR, and `mr-123` is the name of the branch created for that MR
-   `git switch mr-123`
-4. To inspect which files has been changed in the MR , locally :
-   `git diff --name-only origin/main...mr-123`
+### Instructor demonstration: One issue, one proposed solution, one review
 
-5. To see which changes has been inside the file:
-`git diff origin/main...mr-123 -- path2file`
+**1. Owner: describe a problem using a GitHub issue**
 
-4. Owner accept the change and write a kind message to the collaborator and then merge the MR to main. 
+In your `field-study` repository, open **Issues → New issue**.
 
-- explain visually what happens.
+**Example title:** `Add a README for reproducibility of the analysis`
 
-**Assignment:**
+**Example description:**
 
-1. Write an Issue in your `patients-analysis` repo. Options:
+> A new team member cannot tell what this repository contains or how to run the Python analysis. Add a `README.md` containing the research question, a description of the files, instructions for running `calculate_mean.py`, the expected result, and notes about data provenance. Link to `methods.md` for methodological details.
+>
 
-   * Add a multiplication function
-   * Improve `calculate_mean` with full documentation
-   * Create a `README.md` file
 
-2. Pair up:
+**2. Collaborator: fork, clone, and create a branch**
 
-   * Clone or fork each other’s repositories. 
-   * Create a branch, solve the issue.
-   * Open a Merge Request with your changes.
+Fork the owner's repository on GitHub. Then, from outside any existing `field-study` repository:
 
-3. Review and integrate the MR if possible.
+```bash
+cd ~/Desktop
+git clone https://github.com/<collaborator-username>/field-study.git field-study-contribution
+cd field-study-contribution
+git switch -c improve_readme
+```
 
-4. Change roles 
+Make the requested change:
 
-5. Reflect:
+```bash
+nano README.md
+```
+Inside nano writes: 
 
-   * What worked well?
-   * What was confusing?
-   * Did you encounter merge conflicts?
-   * How would you improve the process next time?
+```markdown
+
+# Water Temperature Field Study
+
+## Research question
+
+What is the average water temperature recorded during our field study?
+
+
+## How to reproduce the analysis
+
+**Requirements:** Python 3 (no external packages needed).
+
+Run the following command from the repository folder: `python calculate_mean.py`
+
+
+**Expected result:** Mean water temperature:18.25 C
+
+See methods.md for further methodological details.
+```
+
+
+```bash
+git status
+git add README.md
+git diff --staged
+git commit -m "Document how to reproduce the field study"
+git push -u origin improve_readme
+
+``` 
+
+**3. Collaborator: open a pull request**
+
+On GitHub, open a PR with:
+
+- **Base repository:** the owner's `field-study`; **base branch:** `main`.
+- **Head repository:** the collaborator's fork; **compare branch:** `improve-readme`.
+- **PR description:** Explain what changed, why, and how it was checked. Link the issue (for example, `Closes #12`, replacing `12` with the real issue number).
+
+**4. Owner: review before merging**
+
+On GitHub, open the PR's **Files changed** tab. Look for missing instructions, confusing claims about the source data, or undocumented assumptions. Leave a comment or approve the PR.
+
+**Optional — test the collaborator's branch locally using commands from this course:**
+
+```bash
+cd ~/Desktop
+git clone --branch improve_readme https://github.com/<collaborator-username>/field-study.git  field-study-review
+cd field-study-review
+git branch -a
+git switch improve-readme
+git log -1 --name-only
+cat Readme.md
+```
+
+Here, `--branch improve-readme` selects the proposed branch from the collaborator's **fork**. The clone goes into a separate `field-study-review` directory, so it does not overwrite the owner's local project. For a README-only PR, verify that the documented command and output are correct.
+
+**5. Owner: merge, then synchronize the original local repository**
+
+After review, merge the PR in GitHub and reply a friendly message to the collaborator. Then return to your **original** local project:
+
+```bash
+cd ~/Desktop/field-study
+git pull origin main
+git log --oneline
+git status
+```
+
 
 ---
 
