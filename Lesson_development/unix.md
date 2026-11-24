@@ -219,7 +219,7 @@ $ cd -  # Return to previous directory → efficient navigation
 you'll see you're back in `~/Desktop/shell-lesson-data`.
 Run `cd -` again and you're back in `~/Desktop/shell-lesson-data/exercise-data/creatures`
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+## Exercises
 
 ## Relative Path Resolution (https://swcarpentry.github.io/shell-novice/instructor/02-filedir.html)
 
@@ -231,8 +231,8 @@ what will `ls -F ../backup` display?
 3. `2012-12-01/ 2013-01-08/ 2013-01-27/`
 4. `original/ pnas_final/ pnas_sub/`
 
+## Exercise 1 — Find your way through a research project 
 
----
 
 ## 10:05–10:25 (20 min) — Working with Files & Dirs (Part 1)
 
@@ -408,6 +408,9 @@ $ rm quotes.txt # Delete file
 ```bash
 $ rm -r thesis_backup/ # Delete directory recursively
 ```
+
+
+
 
 ## Wildcards
 
