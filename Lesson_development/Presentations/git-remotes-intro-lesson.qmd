@@ -45,17 +45,20 @@ title: Git Remotes and collaboration
 - **You can run your own GitLab: handy when data must stay in-house**  
   The core of GitLab is open source, and anyone can install it on their own server.  Your code, and sometimes sensitive project files, stay on infrastructure your institution controls.
 
+## Gitlab vs GitHub 
+
 - **Same Git, different words: core vocabulary**  
-  If you know GitHub, you already know most of GitLab, but some names differ:
+
 
   | GitHub | GitLab |
   |---|---|
   | Pull request | **Merge request** |
   | Repository | **Project** (a repository plus its issues, CI, wiki, etc.) |
   | Organization | **Group** (can contain *subgroups*) |
+  |Issue | **Work items - Issue** |
 
 
-  A *fork*, *branch*, *issue*, and *wiki* mean the same on both platforms. 
+  A *fork*, *branch*, and *wiki* mean the same on both platforms. 
 
 
 ## Local and remote repositories
