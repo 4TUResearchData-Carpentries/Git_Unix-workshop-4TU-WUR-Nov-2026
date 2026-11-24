@@ -1,45 +1,58 @@
 ---
-title: Git Remotes
+title: Git Remotes and collaboration
 ---
 
-<!-- Converted from Git-remotes-intro-lesson.pptx; 1 slide per original PPTX slide.
-     Images are stored under ./images/git-remotes-intro-lesson/. -->
 
-## Git Remotes: GitHub
 
-<!-- Source slide 1 -->
+# What are Git remotes? 
 
-::: {.pill .p-orange}
-Git remotes and collaboration
-:::
+
+
 
 
 ## Git remotes
 
-<!-- Source slide 2 -->
 
-Remote repositories are versions of your project that are hosted on the Internet or somewhere on a network.
 
-Collaborating with others involves managing these remote repositories and **pushing** and **pulling** data to and from them when you need to share work.
 
-**Examples:** GitHub, GitLab, Bitbucket.
+::: {.incremental}
+
+- Git was created to support collaboration among developers working on the Linux kernel.
+
+
+- Git is distributed: every developer has a local repository containing the full project history.
+
+
+- Git remotes allow these independent repositories to exchange changes, making collaboration possible without relying on a single central server.
+
+- Remote repositories (Git remotes) are versions of your project that are hosted on the Internet or somewhere on a network (private server, like a institutional server). 
+
+- Collaborating with others involves managing these remote repositories and **pushing** and **pulling** data to and from them when you need to share work.
+
+- **Examples:** GitHub, GitLab, Bitbucket.
+
+
+:::
+
+
+
 
 
 ## GitHub
 
-<!-- Source slide 3 -->
+- GitHub is a web-based platform for hosting Git repositories, sharing code, and collaborating on projects.
 
-::: {.columns}
-::: {.column width="43%"}
-![GitHub logo](images/git-remotes-intro-lesson/slide-03-01-4d7a481a15.png){width="86%"}
-:::
 
-::: {.column width="57%"}
-- AI-powered developer platform for creating, storing, managing and sharing code
-- Combines Git-based distributed version control with access control, issue tracking, feature requests, project management, continuous integration and wikis
-- One of the largest source code hosts
-:::
-:::
+
+- Launched in 2008, three years after Git was created, it was acquired by Microsoft in 2018.
+
+
+
+- It extends Git with collaboration features such as Issues, Pull Requests, code reviews, and discussions.
+
+
+
+- It also offers GitHub Actions to automate workflows such as testing and deploying software. 
 
 
 ## Local and remote repositories
@@ -54,55 +67,54 @@ Collaborating with others involves managing these remote repositories and **push
 ::: {.column width="33%"}
 ![Local computer 1](images/git-remotes-intro-lesson/slide-04-01-76a9fadabe.jpg){width="65%"}
 
-::: {.pill .p-cream}
-Fetch / Pull ←
-::: {.pill .p-orange}
-Push →
-:::
+
+Fetch / Pull ←  From Remote
+
+Push → To Remote
 :::
 
 ::: {.column width="33%"}
 ![Local computer 2](images/git-remotes-intro-lesson/slide-04-01-76a9fadabe.jpg){width="65%"}
 
-::: {.pill .p-cream}
-Fetch / Pull ←
-::: {.pill .p-orange}
-Push →
+
+Fetch / Pull ←  From Remote
+
+Push → To Remote
 :::
-:::
+
 
 ::: {.column width="33%"}
 ![Local computer 3](images/git-remotes-intro-lesson/slide-04-01-76a9fadabe.jpg){width="65%"}
 
-::: {.pill .p-cream}
-Fetch / Pull ←
-::: {.pill .p-orange}
-Push →
+Fetch / Pull ←  From Remote
+
+Push → To Remote
+
 :::
 :::
-:::
 
-<small>Push sends local commits to the remote; fetch/pull retrieves changes from a remote.</small>
+- **Push sends local commits** to the remote; 
+- **Fetch/Pull retrieves remote commits** from a remote.
 
 
-## Schedule
+## What we will do today?
 
-<!-- Source slide 5 -->
 
-**13:30–15:30**
-
-Types of collaborations and good practices for collaboration
-
-**15:30–16:30**
-
-Get to know 4TU.ResearchData, described in the original presentation as a trusted repository for research data and software in natural and engineering sciences and design.
+| Time | Activity |
+|:--|:--|
+| 09:30–12:30 | Create a remote repository and clone/push/pull from an existing repository |
+| 12:30–13:30 | **Lunch** |
+| 13:30–14:30 | Pair assignment of collaboration |
+| 14:30–14:45 | **Break** |
+| 14:45- 15:30 | Introduction to 4TU.ResearchData |
+|15:30-16:00| Feedback (post workshop survey) |
 
 
 ## Let’s start the lesson
 
 <!-- Source slide 6 -->
 
-![Let’s start the lesson illustration](images/git-remotes-intro-lesson/slide-06-01-63a0fbeafb.jpg){width="62%"}
+![](images/git-remotes-intro-lesson/slide-06-01-63a0fbeafb.jpg){width="62%"}
 
 
 ## SSH connection
@@ -124,44 +136,7 @@ SSH keys can be used to authenticate a user when interacting with a Git remote.
 :::
 
 
-## Dealing with conflicts when collaborating in a project
 
-<!-- Source slide 8 (hidden in original PowerPoint) -->
-
-::: {.columns}
-::: {.column width="50%"}
-![Alice](images/git-remotes-intro-lesson/slide-08-01-bb5a1ef5ea.png){width="30%"}
-
-**Alice**
-
-```bash
-git add .
-git commit -m "message"
-git pull
-git push
-```
-:::
-
-::: {.column width="50%"}
-![John](images/git-remotes-intro-lesson/slide-08-02-8ec2483c8b.png){width="30%"}
-
-**John**
-
-```bash
-git add .
-git commit -m "message"
-git push
-```
-:::
-:::
-
-::: {.note-box}
-Both collaborators coordinate changes through a shared remote repository.
-:::
-
-::: {.notes}
-Originally hidden in PowerPoint.
-:::
 
 
 ## Branches over time

@@ -70,7 +70,7 @@ title: Unix Shell introduction
 
 ::: {.columns}
 ::: {.column width="53%"}
-![](images/unix-shell-introduction/slide-03-01-80482b9c3d.png){width="100%"}
+![](images/unix-shell-introduction/slide-03-01-80482b9c3d.png){width="80%"}
 :::
 
 ::: {.column width="47%"}
@@ -78,31 +78,59 @@ title: Unix Shell introduction
 
 Imagine you need to create 50 directories, rename hundreds of files, or run the same operation across many datasets. In a GUI, that means copy-paste, and hundreds of clicks. 
 
+::: {.fragment}
+
+![Better using a CLI!](images/unix-shell-introduction/slide-02-05-ea31f416bc.png){width="45%"}
+
+:::
+
 :::
 :::
 
-## Key points about the Unix Shell
+
+
+
+
+## Key points about the Unix Shell I
 
 ::: {.incremental}
 
-- **Unix was partly born out of a video game! (1969)**  
-  Ken Thompson's work on a space exploration game called *Space Travel* helped set the stage for developing Unix at Bell Labs. 🚀
+- **What is Unix?**  
+  Unix is a family of operating systems that started at Bell Labs in 1969 and still shapes most of today's computing. Linux and macOS are its descendants or close relatives. Its design philosophy: build small programs that each do one thing well, treat almost everything as a file, and use plain text as the common language between programs.
 
-- **The name Unix started as a joke!**  
-  Unix was inspired by an older operating system called *Multics*. The name *Unics* was a playful reference to its simpler design. It eventually became *Unix*.
-
-- **Unix commands have strange names for a reason!**  
-  `grep` comes from an old text-editor instruction (`g/re/p`), while `cat` stands for *concatenate*, not the animal! 🐈
-
-- **One tiny symbol made Unix incredibly powerful: `|`**  
-  The pipe connects small programs, allowing the output of one command to become the input of another. Think of it as an assembly line for data!
-
-- **Technology from 1969 is still everywhere!**  
-  Unix-style commands are still used on Linux, macOS, research servers, and supercomputers. Learning the shell means learning a language that has survived generations of technology.
+- **What is the Unix shell?**  
+  The shell is a program that reads the commands you type and asks the operating system to run other programs for you. It is both an interactive interface (you type, it answers) and a scripting language (you save the same commands in a file to repeat them). Common shells are `bash` and `zsh`, and `zsh` is the default on modern macOS.
 
 :::
 
-## Unix, Shell, Terminal, Bash — What’s the Difference?
+## Key points about the Unix Shell II
+
+::: {.incremental}
+
+- **How is the shell different from Python or R?**  
+  Python and R are built to *compute*; the shell is built to *connect* existing programs. A few things set it apart:
+  - The commands you type interactively are the same ones you put in a script, so there is no switch between "exploring" and "automating".
+  - Wildcards let one line act on thousands of files: `wc -l *.csv` counts the lines in every CSV file in the folder.
+  - Any program, in any language, can be a building block.
+
+- **One tiny symbol made Unix incredibly powerful: `|`**  
+  The pipe sends the output of one command to the input of the next, like an assembly line for data. 
+
+:::
+
+## Key points about the Unix Shell III
+
+::: {.incremental}
+
+- **Why it matters for researchers today**  
+  - **Remote machines:** university clusters and supercomputers (all of the world's top 500 run Linux) are usually reached *only* through a shell.
+  - **Scale:** you can inspect a 50 GB file with `head`, `wc`, or `grep` without opening it, and run the same analysis over hundreds of samples with a loop.
+  - **Reproducibility:** a shell script is a precise, re-runnable record of what you did to your data.
+  - **Longevity:** commands from the 1970s still work today, so the skills you learn won't expire.
+
+:::
+
+## Unix, Shell, Terminal, Bash : What’s the Difference?
 
 <!-- Source slide 5 -->
 
@@ -187,11 +215,11 @@ Live coding experience.
 ::: {.column width="62%"}
 How often do you currently use the command line?
 
-![Survey responses about command-line experience](images/unix-shell-introduction/slide-08-02-c727f06ce0.png){width="96%"}
+![](images/unix-shell-introduction/slide-08-02-c727f06ce0.png){width="96%"}
 :::
 
 ::: {.column width="38%"}
-![Participant working on a laptop](images/unix-shell-introduction/slide-07-01-58d1865f4d.png){width="85%"}
+![](images/unix-shell-introduction/slide-07-01-58d1865f4d.png){width="85%"}
 :::
 :::
 

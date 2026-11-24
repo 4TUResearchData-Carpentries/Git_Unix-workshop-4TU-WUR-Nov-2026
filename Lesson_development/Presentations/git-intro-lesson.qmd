@@ -67,39 +67,41 @@ In research and software projects, many people may work on the same files: scrip
 ::: {.column width="33%"}
 
 
-![Laura](images/git-intro-lesson/Laura.png){width="40%"}
+![Laura](images/git-intro-lesson/Laura.png){width="32%"}
 
 :::
 
 ::: {.column width="33%"}
 
 
-![](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
+![Tom](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="32%"}
 
 :::
 :::
 
-::: {.pill .p-orange}
+##  A group coding project 
+
+
 
 Each of them have the same copy of the code base of the project, but they are working on different parts of it.
 
-:::
-
-## A group coding project : *Challenges*
 
 
+::: {.fragment}
+
+### Challenges
 
  - How to merge all these different copies together and maintain a final copy of the project?
  - What changed between two versions of the same analysis?
  - Which merge did work and which one did not?
  - Who changed what and when? 
 
-
+:::
 
 
 ::: {.fragment}
 
-![](images/git-intro-lesson/slide-14-01-bf61659951.png){width="80%"}
+![](images/git-intro-lesson/slide-14-01-bf61659951.png){width="50%"}
 
 :::
 
@@ -276,19 +278,6 @@ Save the snapshot in your photo album.
 
 <small>Gandhi, R. (2022). *Head First Git*. O’Reilly Media.</small>
 
-
-## Working directory, staging area and Git history: status
-
-<!-- Source slide 23 -->
-
-![Git working directory staging and history status diagram](images/git-intro-lesson/slide-23-01-70934dccbb.png){width="92%"}
-
-
-## Git workflow across time
-
-<!-- Source slide 24 -->
-
-![Expanded Git workflow diagram](images/git-intro-lesson/slide-24-01-7208de8c60.png){width="92%"}
 
 
 ## git restore
