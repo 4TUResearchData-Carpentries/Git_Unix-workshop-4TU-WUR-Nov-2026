@@ -206,29 +206,57 @@
 <!-- Source slide 3 -->
 <div class="columns">
 <div class="column" style="width:53%;">
-<p><img data-src="images/unix-shell-introduction/slide-03-01-80482b9c3d.png" style="width:100.0%"></p>
+<p><img data-src="images/unix-shell-introduction/slide-03-01-80482b9c3d.png" style="width:80.0%"></p>
 </div><div class="column" style="width:47%;">
 <p><strong>The problem</strong></p>
 <p>Imagine you need to create 50 directories, rename hundreds of files, or run the same operation across many datasets. In a GUI, that means copy-paste, and hundreds of clicks.</p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/unix-shell-introduction/slide-02-05-ea31f416bc.png" style="width:45.0%"></p>
+<figcaption>Better using a CLI!</figcaption>
+</figure>
+</div>
+</div>
 </div></div>
 </section>
-<section id="key-points-about-the-unix-shell" class="slide level2">
-<h2>Key points about the Unix Shell</h2>
+<section id="key-points-about-the-unix-shell-i" class="slide level2">
+<h2>Key points about the Unix Shell I</h2>
 <ul>
-<li class="fragment"><p><strong>Unix was partly born out of a video game! (1969)</strong><br>
-Ken Thompson’s work on a space exploration game called <em>Space Travel</em> helped set the stage for developing Unix at Bell Labs. 🚀</p></li>
-<li class="fragment"><p><strong>The name Unix started as a joke!</strong><br>
-Unix was inspired by an older operating system called <em>Multics</em>. The name <em>Unics</em> was a playful reference to its simpler design. It eventually became <em>Unix</em>.</p></li>
-<li class="fragment"><p><strong>Unix commands have strange names for a reason!</strong><br>
-<code>grep</code> comes from an old text-editor instruction (<code>g/re/p</code>), while <code>cat</code> stands for <em>concatenate</em>, not the animal! 🐈</p></li>
-<li class="fragment"><p><strong>One tiny symbol made Unix incredibly powerful: <code>|</code></strong><br>
-The pipe connects small programs, allowing the output of one command to become the input of another. Think of it as an assembly line for data!</p></li>
-<li class="fragment"><p><strong>Technology from 1969 is still everywhere!</strong><br>
-Unix-style commands are still used on Linux, macOS, research servers, and supercomputers. Learning the shell means learning a language that has survived generations of technology.</p></li>
+<li class="fragment"><p><strong>What is Unix?</strong><br>
+Unix is a family of operating systems that started at Bell Labs in 1969 and still shapes most of today’s computing. Linux and macOS are its descendants or close relatives. Its design philosophy: build small programs that each do one thing well, treat almost everything as a file, and use plain text as the common language between programs.</p></li>
+<li class="fragment"><p><strong>What is the Unix shell?</strong><br>
+The shell is a program that reads the commands you type and asks the operating system to run other programs for you. It is both an interactive interface (you type, it answers) and a scripting language (you save the same commands in a file to repeat them). Common shells are <code>bash</code> and <code>zsh</code>, and <code>zsh</code> is the default on modern macOS.</p></li>
+</ul>
+</section>
+<section id="key-points-about-the-unix-shell-ii" class="slide level2">
+<h2>Key points about the Unix Shell II</h2>
+<ul>
+<li class="fragment"><strong>How is the shell different from Python or R?</strong><br>
+Python and R are built to <em>compute</em>; the shell is built to <em>connect</em> existing programs. A few things set it apart:
+<ul>
+<li class="fragment">The commands you type interactively are the same ones you put in a script, so there is no switch between “exploring” and “automating”.</li>
+<li class="fragment">Wildcards let one line act on thousands of files: <code>wc -l *.csv</code> counts the lines in every CSV file in the folder.</li>
+<li class="fragment">Any program, in any language, can be a building block.</li>
+</ul></li>
+<li class="fragment"><strong>One tiny symbol made Unix incredibly powerful: <code>|</code></strong><br>
+The pipe sends the output of one command to the input of the next, like an assembly line for data.</li>
+</ul>
+</section>
+<section id="key-points-about-the-unix-shell-iii" class="slide level2">
+<h2>Key points about the Unix Shell III</h2>
+<ul>
+<li class="fragment"><strong>Why it matters for researchers today</strong>
+<ul>
+<li class="fragment"><strong>Remote machines:</strong> university clusters and supercomputers (all of the world’s top 500 run Linux) are usually reached <em>only</em> through a shell.</li>
+<li class="fragment"><strong>Scale:</strong> you can inspect a 50 GB file with <code>head</code>, <code>wc</code>, or <code>grep</code> without opening it, and run the same analysis over hundreds of samples with a loop.</li>
+<li class="fragment"><strong>Reproducibility:</strong> a shell script is a precise, re-runnable record of what you did to your data.</li>
+<li class="fragment"><strong>Longevity:</strong> commands from the 1970s still work today, so the skills you learn won’t expire.</li>
+</ul></li>
 </ul>
 </section>
 <section id="unix-shell-terminal-bash-whats-the-difference" class="slide level2">
-<h2>Unix, Shell, Terminal, Bash — What’s the Difference?</h2>
+<h2>Unix, Shell, Terminal, Bash : What’s the Difference?</h2>
 <!-- Source slide 5 -->
 <p>These terms are often used interchangeably, but they refer to distinct layers of the system.</p>
 <div class="columns">
@@ -282,19 +310,9 @@ Unix-style commands are still used on Linux, macOS, research servers, and superc
 <div class="columns">
 <div class="column" style="width:62%;">
 <p>How often do you currently use the command line?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="images/unix-shell-introduction/slide-08-02-c727f06ce0.png" style="width:96.0%"></p>
-<figcaption>Survey responses about command-line experience</figcaption>
-</figure>
-</div>
 </div><div class="column" style="width:38%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="images/unix-shell-introduction/slide-07-01-58d1865f4d.png" style="width:85.0%"></p>
-<figcaption>Participant working on a laptop</figcaption>
-</figure>
-</div>
 </div></div>
 </section>
 <section id="your-expectations-for-this-workshop" class="slide level2">
