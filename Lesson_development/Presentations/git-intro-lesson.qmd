@@ -131,6 +131,18 @@ Each of them have the same copy of the code base of the project, but they are wo
 The workshop of today!
 :::
 
+:::{.fragment}
+
+<!-- Source slide 8 -->
+**Your experience!**
+
+How often do you currently use Git?
+
+![](images/git-intro-lesson/participants_experience_git.png){width="96%"}
+
+
+:::
+
 
 ## Tools
 

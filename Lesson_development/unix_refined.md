@@ -1,12 +1,6 @@
 
 # Unix lesson
 
-> **Instructor guide — refined lesson:** Original teaching material retained, with all ten worksheet exercises integrated at concept checkpoints. Exercise 2 is distributed across the lesson, and Exercise 9 is split into two parts. Original Carpentries challenges remain optional alternatives. Use Bash and the extracted `shell-lesson-data` folder on the Desktop. Hypothetical scenarios are for reasoning or command writing; only Exercises 3 and 10 require modifying the practice workspace. Keep original research files unchanged.
->
-> **Timing:** Original section times are retained as planning anchors, not a guarantee that every demo and exercise fits. Shorten Nelle’s demonstrations or defer optional activities as needed; Exercise 10 is independent practice. See `unix_shell_exercises_solutions.md` for answers.
->
-> **Editorial changes:** Added demonstrations for append redirection, quoted loop variables, loop-wide redirection, `bash -x` and `grep -i`; corrected a mismatched code fence, a wildcard example and several navigation commands.
-
 
 ## Intro message
 

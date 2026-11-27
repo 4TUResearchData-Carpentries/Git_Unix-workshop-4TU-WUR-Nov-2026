@@ -69,9 +69,22 @@ title: Welcome to the Unix & Git workshop
 
 ### You!
 
-**Faculty**
 
-![Pie chart of workshop participant faculties](images/workshop-intro-day-1/slide-05-faculty-chart.svg){width=75%}
+
+::: {.fragment}
+
+*Domains of study*
+
+- Genetics/Genomics/ Bioinformatics
+- Biology/ Ecology
+- Life sciences
+
+:::
+
+
+
+
+
 
 
 

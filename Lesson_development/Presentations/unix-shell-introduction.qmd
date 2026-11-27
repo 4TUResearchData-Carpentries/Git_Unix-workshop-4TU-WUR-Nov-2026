@@ -215,7 +215,7 @@ Live coding experience.
 ::: {.column width="62%"}
 How often do you currently use the command line?
 
-![](images/unix-shell-introduction/slide-08-02-c727f06ce0.png){width="96%"}
+![](images/unix-shell-introduction/participants_experience_bash.png){width="96%"}
 :::
 
 ::: {.column width="38%"}
@@ -230,11 +230,12 @@ How often do you currently use the command line?
 
 ::: {.columns}
 ::: {.column width="68%"}
-**1.** “I want to learn how to manage my code with Git and how to collaborate with others on Git.”
 
-**2.** “I want to learn everything about Unix shell and Git because they are new to me. What’s more important is that managing my data and codes in a good way can really help me to conduct all my research tasks.”
+1. “To enhance and refresh my coding skills"
 
-**3.** “Smoothly collaborating using Github.”
+2. “I want to learn how to use Unix (shell) and Git for version control, in the context of academic / professional research (data analysis, etc)"
+3. “How to integrate version control into my project pipeline.”
+
 :::
 
 ::: {.column width="32%"}
